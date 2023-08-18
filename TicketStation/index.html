@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font awesome -->
+    <script
+      src="https://kit.fontawesome.com/e14b42e4c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+    
+    <title>Jozi Arts</title>
+  </head>
+  <body>
+    <header>
+      <!-- NAVBAR -->
+      <nav>
+        <div class="navbar">
+          <h1>Jozi Arts</h1>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <i
+              class="fa-solid fa-basket-shopping fa-fade fa-lg"
+              style="color: #94004f"
+              id="openModalBtn"
+            ></i>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Clothing</a></li>
+          </ul>
+          <div class="basket">
+            <div
+              class="quantity total-items-in-cart"
+              id="cartItemCount item-number"
+            >
+              0
+            </div>
+            <img src="./Images/cart.png" alt="" class="cart open-cart-btn" />
+          </div>
+        </div>
+      </nav>
+
+      <!-- SIDE CART -->
+      <div class="side-cart">
+        <div class="cart-content">
+          <div class="cart-header">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <div class="header-title">
+              <h2 class="cart-title">Your Cart</h2>
+            </div>
+            <button class="close-btn">Close</button>
+          </div>
+          <div class="cart-items"></div>
+          <div class="cart-buttons">
+            <div class="sub-total">
+              <p class="subtotal"></p>
+              <button class="checkout-btn">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHECKOUT MODAL -->
+      <div class="modal" id="paymentModal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Payment Summary</h2>
+          <p>Subtotal: <span id="modalSubtotal"></span></p>
+          <button class="pay-btn">Pay</button>
+          <p id="paymentStatus" style="display: none">Payment Successful</p>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+          <button>Search</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- UPCOMING EVENTS -->
+
+    <section class="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <select id="month-dropdown">
+        <option value="00">All</option>
+        <option value="01">January</option>
+        <option value="02">February</option>
+        <option value="03">March</option>
+        <option value="04">April</option>
+        <option value="05">May</option>
+        <option value="06">June</option>
+        <option value="07">July</option>
+        <option value="08">August</option>
+        <option value="09">September</option>
+        <option value="10">October</option>
+        <option value="11">November</option>
+        <option value="12">December</option>
+      </select>
+      <div class="event-grid">
+        <!-- Events displaying here -->
+      </div>
+    </section>
+    <br>
+
+    <!-- STORE -->
+    <section class="store">
+      <h2>Store</h2>
+      <select id="month-dropdown">
+        <option value="00">All</option>
+        <option value="01">T Shirts</option>
+        <option value="02">Hoodies</option>
+        <option value="03">Caps</option>
+        <option value="04">Paintings</option>
+      </select>
+      <div class="store-grid">
+        <!-- Store items displaying here -->
+      </div>
+    </section>
+
+    <!-- PARTNERS -->
+
+    <section class="our-partners">
+      <h2>Our Partners</h2>
+      <div class="partner-logos">
+        <img src="./Images/city.png" alt="Partner 1" />
+        <img src="./Images/eskom.png" alt="Partner 2" />
+        <img src="./Images/jw.jpeg" alt="Partner 2" />
+        <img src="./Images/city.png" alt="Partner 1" />
+        <img src="./Images/eskom.png" alt="Partner 2" />
+        <img src="./Images/jw.jpeg" alt="Partner 2" />
+        <!-- Add more partner logos here -->
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+      <div class="subscribe">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form action="#" method="post">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Us</h3>
+        <p>123 Jozi St, Johannesburg, South Africa</p>
+        <p>Phone: +27 000 0000</p>
+        <p>Email: info@ticketstation.com</p>
+      </div>
+      <div class="social-links">
+        <h3>Follow Us</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">I will add icons</a>
+      </div>
+      <div id="paypal-btn-container">\</div>
+    </footer>
+
+    <script src="index.js"></script>
+    
+  </body>
+</html>
